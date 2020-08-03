@@ -9,8 +9,6 @@
 
 ### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views.
-
 [Desktop Home page](https://i.imgur.com/CSJWExN.png)
 
 
