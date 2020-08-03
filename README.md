@@ -32,18 +32,26 @@
 
 <br>
 
-### MVP
-
->**Every Cent** _Mvp will include a homepage that contains the users current balance and a list of expenses. And will be a add page that will allow you to add new expenses to you portfolio_
+### MVP/Post-MVP
 
 <br>
 
-#### Goals
+### MVP
 
 - _Display and update balance data_
 - _Retrieve and display new expenses_
 - _Update and delete expenses_
 - _Responsive accross all screen sizes_
+
+<br>
+
+### Post-MVP
+
+- _Add user account and auth capabilities._
+- _Add graph to display categorys._
+- _Add low balance warning._
+- _Add redirect from expense page._
+
 
 <br>
 
@@ -125,16 +133,6 @@
 | :--------: | :----------------------------------------- |
 | Capitalize | _Lorem ipsum dolor sit amet, consectetur._ |
 
-<br>
-
-### Post-MVP
-
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
-
-- _Add user account and auth capabilities._
-- _Add graph to display categorys._
-- _Add low balance warning._
-- _Add redirect from expense page._
 
 <br>
 
