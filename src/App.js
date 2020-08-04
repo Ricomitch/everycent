@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Route } from "react-router-dom"
 import './App.css';
 import axios from 'axios'
-import Data from "./Data"
-import CreateExpenses from "./CreateExpenses"
+import Data from "./components/Data"
+import CreateExpenses from "./components/CreateExpenses"
 
 function App() {
   const [funds, updateFunds] = useState([])
@@ -30,7 +30,7 @@ function App() {
         updateFetchExpenses={updateFetchExpenses}
         fetchExpenses={fetchExpenses}
       />
-      {funds.map(data => <Data data={data} key={data.id} />)}
+      {funds.map(data => <Data data={data} key={data.id} fetchExpenses={fetchExpenses} updateFetchExpenses={updateFetchExpenses}  />)}
       
     </main>)
   // <div>
