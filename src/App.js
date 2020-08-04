@@ -6,6 +6,9 @@ import Data from "./Data"
 
 function App() {
   const [funds, updateFunds] = useState([])
+  const [category, updateCategory] = useState('')
+  const [item, updateItem] = useState('')
+  const [amount, updateAmount] = useState('')
     
   useEffect(() => {
     const apiCall = async () => {
@@ -18,10 +21,43 @@ function App() {
     }
     apiCall()
   }, [])
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const data = await axios.post("https://api.airtable.com/v0/appqyiVOvBv6WBtX3/Table%201", {
+        fields: {
+          "Category": category,
+          "Items": item,
+          "Amount": amount
+        }
+    }, {
+      
+      headers: {
+        'Authorization': `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
+        'Content-Type': 'application/json'
+      }
+    })
+    console.log(data)
+  }
+
   return (
     <main>
       <h1>My Funds</h1>
-      {funds.map(data => <Data data={data}/>)}
+      {funds.map(data => <Data data={data} key={data.id} />)}
+      <h2>Add Expenses</h2>
+      <form onSubmit={handleSubmit}>
+
+        <label htmlFor="category">Category</label>
+        <input type="text" id="category" onChange={e => updateCategory(e.target.value)} />
+
+        <label htmlFor="item">Item</label>
+        <input type="text" id="item" onChange={e => updateItem(e.target.value)} />
+
+        <label htmlFor="amount">Amount</label>
+        <input type="text" id="amount" onChange={e => updateAmount(e.target.value)} />
+        <input type="submit" value="Submit"/>
+         
+      </form>
     </main>)
   // <div>
   //   <Route path="/" exact>
