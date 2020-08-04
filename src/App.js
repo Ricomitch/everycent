@@ -21,12 +21,7 @@ function App() {
   return (
     <main>
       <h1>My Funds</h1>
-      {funds.map(data => <div>
-        <h2>{data.fields.Category}</h2>
-        <h2>{data.fields.Name_of_Expenses}</h2>
-        <h3>{data.fields.Amount}</h3>
-      </div>
-      )}
+      {funds.map(data => <Data data={data}/>)}
     </main>)
   // <div>
   //   <Route path="/" exact>
