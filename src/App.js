@@ -9,6 +9,7 @@ function App() {
   const [category, updateCategory] = useState('')
   const [item, updateItem] = useState('')
   const [amount, updateAmount] = useState('')
+  const [fetchExpenses, updateFetchExpenses] = useState(false)
     
   useEffect(() => {
     const apiCall = async () => {
@@ -20,7 +21,7 @@ function App() {
       updateFunds(data.data.records)      
     }
     apiCall()
-  }, [])
+  }, [fetchExpenses])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -28,7 +29,7 @@ function App() {
         fields: {
           "Category": category,
           "Items": item,
-          "Amount": amount
+          "Amount": parseInt(amount,10)
         }
     }, {
       
@@ -37,7 +38,10 @@ function App() {
         'Content-Type': 'application/json'
       }
     })
-    console.log(data)
+    updateFetchExpenses(!fetchExpenses)
+    updateCategory('')
+    updateItem('')
+    updateAmount('')
   }
 
   return (
@@ -48,13 +52,13 @@ function App() {
       <form onSubmit={handleSubmit}>
 
         <label htmlFor="category">Category</label>
-        <input type="text" id="category" onChange={e => updateCategory(e.target.value)} />
+        <input type="text" id="category" onChange={e => updateCategory(e.target.value)} value={category}/>
 
         <label htmlFor="item">Item</label>
-        <input type="text" id="item" onChange={e => updateItem(e.target.value)} />
+        <input type="text" id="item" onChange={e => updateItem(e.target.value)} value={item} />
 
         <label htmlFor="amount">Amount</label>
-        <input type="text" id="amount" onChange={e => updateAmount(e.target.value)} />
+        <input type="text" id="amount" onChange={e => updateAmount(e.target.value)} value={amount} />
         <input type="submit" value="Submit"/>
          
       </form>
