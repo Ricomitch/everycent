@@ -2,7 +2,6 @@ import React from "react";
 import UpdateExpense from "./UpdateExpense";
 import axios from "axios";
 import ReactDOM from "react-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function UpdateData(props) {
   const data = props.data;
