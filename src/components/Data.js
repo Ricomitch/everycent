@@ -1,6 +1,9 @@
 import React from "react";
 import UpdateExpense from "./UpdateExpense";
 import axios from "axios"
+import ReactDOM from 'react-dom'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+
 
 function Data(props) {
   const data = props.data;
@@ -17,12 +20,15 @@ function Data(props) {
   return (
     <div>
       <div className="list">
-      <h4>{data.fields.Category}</h4>
+      <h4 style={{ fontWeight: 'bold' }}>{data.fields.Category}</h4>
       <h4>{data.fields.Items}</h4>
       <h4>{data.fields.Amount}</h4>
-      </div>  
-      <UpdateExpense data={data} fetchExpenses={props.fetchExpenses} updateFetchExpenses={props.updateFetchExpenses} />
-      <button onClick={deleteData}>Delete</button>
+      </div> 
+      {/* <UpdateExpense data={data} fetchExpenses={props.fetchExpenses} updateFetchExpenses={props.updateFetchExpenses} /> */}
+      <div className="delete-btn">
+      <button onClick={deleteData}style={{color: "red"}}><FontAwesomeIcon icon="times-circle" /></button>
+      </div>
+        
     </div>
   );
 }

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 
 .nav {
   background-color: rgb(48, 79, 120);
@@ -9,13 +10,19 @@
   height: 65px;
   width: 100vw;
   top: auto;
-  font-family: 'Merriweather', serif;
+  font-family: 'Exo 2', sans-serif;
   color: rgb(238, 130, 35);
   
 }
 
 .button {
+  float: right;
+
  
+}
+
+.delete-btn{
+  color:red
 }
 
 
@@ -36,22 +43,26 @@
 
 .list {
   background-color: #fff;
-  box-shadow: var(--box-shadow);
+  box-shadow: 2px 2px 3px rgb(165, 147, 147);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
   color: #333;
   display: flex;
   justify-content: space-between;
   position: relative;
   padding: 10px;
   margin: 10px 0;
+  border: 1px solid gainsboro;
 }
 
-.container {
+.balance {
   margin: 30px auto;
   width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* border: 1px solid gainsboro; */
 }
 
 .transaction {
@@ -67,7 +78,7 @@
 
 
 
-.inc-exp-container {
+/* .inc-exp-container {
   background-color: #fff;
   box-shadow: var(--box-shadow);
   padding: 20px;
@@ -75,7 +86,7 @@
   justify-content: space-between;
   margin: 20px 0;
   border: 1px solid gainsboro;
-}
+} */
 
 
 

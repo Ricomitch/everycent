@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route } from "react-router-dom";
+import { Index } from "./index"
 import "./App.css";
 import axios from "axios";
 import Data from "./components/Data";
@@ -46,7 +47,7 @@ function App() {
       <main>
         <div>
           <Nav />
-          <div className="container">
+          <div className="balance">
             <Balance balance={balance} />
             <IncomeExpenses />
           </div>
@@ -83,6 +84,14 @@ function App() {
 
       <Route path="/add" exact>
         <CreateExpenses
+          updateFetchExpenses={updateFetchExpenses}
+          fetchExpenses={fetchExpenses}
+         
+        />
+      </Route>
+
+      <Route path="/update" exact>
+        <UpdateExpense
           updateFetchExpenses={updateFetchExpenses}
           fetchExpenses={fetchExpenses}
          

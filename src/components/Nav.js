@@ -6,7 +6,11 @@ export const Nav = () => {
       <h2>Every ¢ent</h2>
 
       <div className="button">
-        <button onClick={"/add"}>Add Expense</button>
+        <button onClick={"/add"}>Add</button>
+      </div>
+
+      <div className="button">
+        <button onClick={"/update"}>Update</button>
       </div>
     </div>
   );

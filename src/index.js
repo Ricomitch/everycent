@@ -5,6 +5,10 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
+ 
+library.add(faTimesCircle)
 
 ReactDOM.render(
   <Router>
