@@ -7,6 +7,8 @@ import CreateExpenses from "./components/CreateExpenses";
 import { Nav } from "./components/Nav";
 import UpdateExpense from "./components/UpdateExpense";
 import Balance from "./components/Balance";
+import { IncomeExpenses } from "./components/IncomeExpenses";
+
 
 function App() {
   const [funds, updateFunds] = useState([]);
@@ -40,13 +42,18 @@ function App() {
   }, [funds])
 
   return (
-    <div>
+    <div className="body">
       <main>
         <div>
           <Nav />
-          <Balance balance={balance}/>
+          <div className="container">
+            <Balance balance={balance} />
+            <IncomeExpenses />
+          </div>
         </div>
-        <h2>My Funds</h2>
+        <div className="transaction">
+        <h3>Transactions</h3>
+        </div>
         {/* <CreateExpenses */}
         {/* updateFetchExpenses={updateFetchExpenses}
         fetchExpenses={fetchExpenses}

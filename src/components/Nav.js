@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
 export const Nav = () => {
   return (
-    <h1>
-      Every Cent
-    </h1>
-  )
-}
+    <div className="nav">
+      <h2>Every ¢ent</h2>
 
-export default Nav
+      <div className="button">
+        <button onClick={"/add"}>Add Expense</button>
+      </div>
+    </div>
+  );
+};

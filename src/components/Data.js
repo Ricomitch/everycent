@@ -16,9 +16,11 @@ function Data(props) {
 
   return (
     <div>
-      <h2>{data.fields.Category}</h2>
+      <div className="list">
+      <h4>{data.fields.Category}</h4>
       <h4>{data.fields.Items}</h4>
-      <h3>{data.fields.Amount}</h3>
+      <h4>{data.fields.Amount}</h4>
+      </div>  
       <UpdateExpense data={data} fetchExpenses={props.fetchExpenses} updateFetchExpenses={props.updateFetchExpenses} />
       <button onClick={deleteData}>Delete</button>
     </div>
