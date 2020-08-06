@@ -5,18 +5,32 @@
 
 .nav {
   background-color: rgb(48, 79, 120);
-  text-align: left;
-  padding: 8px;
-  height: 65px;
+  height: 75px;
   width: 100vw;
-  top: auto;
   font-family: 'Exo 2', sans-serif;
-  color: rgb(238, 130, 35);
+  /* padding-top: 0px; */
+  justify-content: space-between;
   
 }
 
-.button {
-  float: right;
+.nav-name{
+  text-align: left;
+  padding: 10px;
+  color: rgb(238, 130, 35);
+}
+
+
+
+.button-add {
+  padding: 18px;
+  
+
+ 
+}
+
+.button-update {
+  padding: 18px;
+  
 
  
 }
@@ -30,6 +44,7 @@
 
 
 .body {
+  /* background-image: url('https://cdn.hipwallpaper.com/i/84/19/cUJWqd.jpg') */
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -42,17 +57,18 @@
 
 
 .list {
-  background-color: #fff;
+  background-color: rgb(240, 240, 240);
   box-shadow: 2px 2px 3px rgb(165, 147, 147);
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 15px;
+  font-size: 5px;
   color: #333;
   display: flex;
   justify-content: space-between;
   position: relative;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid gainsboro;
+  border: 1px solid gainsboro; 
+  border-radius: 5px;
 }
 
 .balance {
@@ -63,6 +79,10 @@
   align-items: center;
   justify-content: center;
   /* border: 1px solid gainsboro; */
+}
+
+.balance-txt {
+  font-size: 1px;
 }
 
 .transaction {
@@ -98,13 +118,13 @@
   margin: 5px 0;
 }
 
-.money.plus {
+/* .money.plus {
   color: #2ecc71;
 }
 
 .money.minus {
   color: #c0392b;
-}
+} */
 
 h1 {
   letter-spacing: 1px;

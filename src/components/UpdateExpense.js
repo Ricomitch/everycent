@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import axios from "axios"
 
 function UpdateExpense(props) {
-
+  console.log(props)
   const [category, updateCategory] = useState(props.data.fields.Category)
   const [item, updateItem] = useState(props.data.fields.Items)
   const [amount, updateAmount] = useState(props.data.fields.Amount)

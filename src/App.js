@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route } from "react-router-dom";
-import { Index } from "./index"
+import { Index } from "./index";
 import "./App.css";
 import axios from "axios";
 import Data from "./components/Data";
@@ -9,11 +9,11 @@ import { Nav } from "./components/Nav";
 import UpdateExpense from "./components/UpdateExpense";
 import Balance from "./components/Balance";
 import { IncomeExpenses } from "./components/IncomeExpenses";
-
+import UpdateData from "./components/UpdateData"
 
 function App() {
   const [funds, updateFunds] = useState([]);
-  const [balance, updateBalance] = useState(0)
+  const [balance, updateBalance] = useState(0);
   const [fetchExpenses, updateFetchExpenses] = useState(false);
 
   useEffect(() => {
@@ -32,15 +32,15 @@ function App() {
   }, [fetchExpenses]);
 
   useEffect(() => {
-    let total = 0
+    let total = 0;
     if (funds.length > 0) {
-      funds.forEach(element => {
-       total += element.fields.Amount 
+      funds.forEach((element) => {
+        total += element.fields.Amount;
       });
 
-      updateBalance(total)
+      updateBalance(total);
     }
-  }, [funds])
+  }, [funds]);
 
   return (
     <div className="body">
@@ -53,7 +53,7 @@ function App() {
           </div>
         </div>
         <div className="transaction">
-        <h3>Transactions</h3>
+          <h3>Transactions</h3>
         </div>
         {/* <CreateExpenses */}
         {/* updateFetchExpenses={updateFetchExpenses}
@@ -86,16 +86,24 @@ function App() {
         <CreateExpenses
           updateFetchExpenses={updateFetchExpenses}
           fetchExpenses={fetchExpenses}
-         
         />
       </Route>
 
-      <Route path="/update" exact>
-        <UpdateExpense
-          updateFetchExpenses={updateFetchExpenses}
+      <Route path="/update">
+      {funds.map((data) => (
+          <UpdateData
+            data={data}
+            key={data.id}
+            fetchExpenses={fetchExpenses}
+            updateFetchExpenses={updateFetchExpenses}
+          />
+        ))}
+        {/* <UpdateExpense
+          data={funds}
           fetchExpenses={fetchExpenses}
-         
+          updateFetchExpenses={updateFetchExpenses}
         />
+        /> */}
       </Route>
     </div>
   );
