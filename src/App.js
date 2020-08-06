@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Route } from "react-router-dom";
-import { Index } from "./index";
 import "./App.css";
 import axios from "axios";
 import Data from "./components/Data";
 import CreateExpenses from "./components/CreateExpenses";
 import { Nav } from "./components/Nav";
-import UpdateExpense from "./components/UpdateExpense";
 import Balance from "./components/Balance";
-import { IncomeExpenses } from "./components/IncomeExpenses";
-import UpdateData from "./components/UpdateData"
+import UpdateData from "./components/UpdateData";
 
 function App() {
   const [funds, updateFunds] = useState([]);
@@ -46,20 +43,16 @@ function App() {
     <div className="body">
       <main>
         <div>
-          <Nav />
+          <div>
+            <Nav />
+          </div>
           <div className="balance">
             <Balance balance={balance} />
-            <IncomeExpenses />
           </div>
         </div>
         <div className="transaction">
           <h3>Transactions</h3>
         </div>
-        {/* <CreateExpenses */}
-        {/* updateFetchExpenses={updateFetchExpenses}
-        fetchExpenses={fetchExpenses}
-      /> */}
-        {/* {funds.map(data => <Data data={data} key={data.id} fetchExpenses={fetchExpenses} updateFetchExpenses={updateFetchExpenses} />)} */}
       </main>
 
       <Route path="/" exact>
@@ -71,15 +64,6 @@ function App() {
             updateFetchExpenses={updateFetchExpenses}
           />
         ))}
-
-        {/* <UpdateExpense
-        category={category}
-        updatecategory={updateCategory}
-        items={items}
-        updateitems={updateItems}
-        amount={amount}
-        updateamount={updateAmount}
-      />    */}
       </Route>
 
       <Route path="/add" exact>
@@ -90,7 +74,7 @@ function App() {
       </Route>
 
       <Route path="/update">
-      {funds.map((data) => (
+        {funds.map((data) => (
           <UpdateData
             data={data}
             key={data.id}
@@ -98,12 +82,6 @@ function App() {
             updateFetchExpenses={updateFetchExpenses}
           />
         ))}
-        {/* <UpdateExpense
-          data={funds}
-          fetchExpenses={fetchExpenses}
-          updateFetchExpenses={updateFetchExpenses}
-        />
-        /> */}
       </Route>
     </div>
   );
