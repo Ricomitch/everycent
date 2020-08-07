@@ -30,24 +30,28 @@ function CreateExpense(props) {
     updateCategory("");
     updateItem("");
     updateAmount("");
-    history.push('/')
+    history.push("/");
   };
 
   return (
     <div className="add-expense">
       <form onSubmit={handleSubmit}>
         <h2>Add Expenses</h2>
-        <div className= "add-item">
-          <label htmlFor="category">Category</label>
+        <div className="add-item">
+          <label htmlFor="category">
+            Category
+          </label>
+
           <input
             type="text"
             id="category"
+            
             onChange={(e) => updateCategory(e.target.value)}
             value={category}
           />
         </div>
 
-        <div className= "add-item">
+        <div className="add-item">
           <label htmlFor="item">Item</label>
           <input
             type="text"
@@ -57,7 +61,7 @@ function CreateExpense(props) {
           />
         </div>
 
-        <div className= "add-item">
+        <div className="add-item">
           <label htmlFor="amount">Amount</label>
           <input
             type="text"
@@ -67,8 +71,8 @@ function CreateExpense(props) {
           />
         </div>
 
-        <div className= "add-submit">
-          <input type="submit" value="Submit" />
+        <div className="add-submit">
+          <input type="submit" value="Submit" className="submit" />
         </div>
       </form>
     </div>

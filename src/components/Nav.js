@@ -9,19 +9,20 @@ export const Nav = () => {
           <h2>Every ¢ent</h2>
         </Link>
       </div>
-      
-        <div className="button-add">
+        
+        <div>
           <Link to="/add">
-            <button>Add</button>
+            <button className="button">Add</button>
           </Link>
         </div>
       
       
-        <div className="button-update">
+        <div>
           <Link to="/update">
-            <button>Update</button>
+            <button className="button">Update</button>
           </Link>
-        </div>
+      </div>
+      
 
       
     </nav>
