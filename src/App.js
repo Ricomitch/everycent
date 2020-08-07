@@ -88,7 +88,7 @@ function App() {
           />
         ))}
       </Route>
-      
+      <footer />
     </div>
 
     
