@@ -61,7 +61,7 @@ function UpdateExpense(props) {
           onChange={(e) => updateAmount(e.target.value)}
           value={amount}
         />
-        <input type="submit" value="Update" />
+        <input type="submit" value="Update" className="update" />
         </div>
       </form>
     
