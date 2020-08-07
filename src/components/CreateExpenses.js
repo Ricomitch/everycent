@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 function CreateExpense(props) {
   const [category, updateCategory] = useState("");
   const [item, updateItem] = useState("");
   const [amount, updateAmount] = useState("");
+  const history = useHistory();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,6 +30,7 @@ function CreateExpense(props) {
     updateCategory("");
     updateItem("");
     updateAmount("");
+    history.push('/')
   };
 
   return (

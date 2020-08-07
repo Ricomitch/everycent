@@ -36,6 +36,8 @@ function UpdateExpense(props) {
       <form onSubmit={handleSubmit}>
       <div className="update-form">
         <h2>Update Expenses</h2>
+      </div>
+      <div className= "update-list">
         <label htmlFor="category">Category</label>
         <input
           type="text"
@@ -43,7 +45,7 @@ function UpdateExpense(props) {
           onChange={(e) => updateCategory(e.target.value)}
           value={category}
         />
-
+      
         <label htmlFor="item">Item</label>
         <input
           type="text"

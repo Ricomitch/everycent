@@ -9,10 +9,13 @@ import Balance from "./components/Balance";
 import UpdateData from "./components/UpdateData";
 import { Footer } from "./components/Footer"
 
+
 function App() {
   const [funds, updateFunds] = useState([]);
   const [balance, updateBalance] = useState(0);
   const [fetchExpenses, updateFetchExpenses] = useState(false);
+  
+
 
   useEffect(() => {
     const apiCall = async () => {
@@ -68,13 +71,11 @@ function App() {
       </Route>
 
       <Route path="/add" exact>
-        
       
-        <CreateExpenses
-          updateFetchExpenses={updateFetchExpenses}
-          fetchExpenses={fetchExpenses}
+            <CreateExpenses
+              updateFetchExpenses={updateFetchExpenses}
+              fetchExpenses={fetchExpenses}
             />
-        
       </Route>
 
       <Route path="/update">

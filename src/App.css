@@ -26,6 +26,8 @@ nav {
   color: rgb(238, 130, 35);
 }
 
+
+
 .delete-btn {
   color: red;
 }
@@ -123,7 +125,7 @@ h2 {
 footer {
   display: flex;
   flex-shrink: 0;
-  border: 3px solid rgb(91 91 91);
+  border: 3px solid rgb(135, 135, 135);
   font-size: 10px;
   text-align: center;
   margin: 15px 25px 0px 25px;
@@ -156,14 +158,53 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 350px;
   padding: 5px;
 }
+
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list-category {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ width: 100%;
+}
+
+
+.list-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  
+}
+
+.amount-container {
+  display: flex;
+  flex-direction: column;
+  
+  
+ }
+
 
 .update-form {
   display: flex;
   flex-direction: row;
-  
-  
+  justify-content: flex-start;
+  padding-top: 20px;
+ 
+}
+
+.update-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-bottom: 70px;
+
 
 }
 
