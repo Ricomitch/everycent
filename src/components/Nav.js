@@ -10,14 +10,14 @@ export const Nav = () => {
         </Link>
       </div>
       
-        <div className="button">
+        <div className="button-add">
           <Link to="/add">
             <button>Add</button>
           </Link>
         </div>
       
       
-        <div className="button">
+        <div className="button-update">
           <Link to="/update">
             <button>Update</button>
           </Link>

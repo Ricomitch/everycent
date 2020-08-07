@@ -7,6 +7,7 @@ import CreateExpenses from "./components/CreateExpenses";
 import { Nav } from "./components/Nav";
 import Balance from "./components/Balance";
 import UpdateData from "./components/UpdateData";
+import { Footer } from "./components/Footer"
 
 function App() {
   const [funds, updateFunds] = useState([]);
@@ -53,7 +54,6 @@ function App() {
         <div className="transaction">
           <h3>Transactions</h3>
         </div>
-        
       </main>
 
       <Route path="/" exact>
@@ -86,7 +86,10 @@ function App() {
           />
         ))}
       </Route>
+      
     </div>
+
+    
   );
 }
 

@@ -20,30 +20,23 @@ function Data(props) {
   };
 
   return (
-    
-      <div className="list">
-        <div>
-          <h4 className="list-category" style={{ fontWeight: "bold" }}>
+    <div className="list">
+      <div>
+        <h4 className="list-category" style={{ fontWeight: "bold",  color: "rgb(48, 79, 120)" }}>
           {data.fields.Category}
-          </h4>
-          <h4 className="list-Items">{data.fields.Items}</h4>
-        </div>
+        </h4>
+        <h4 className="list-Items">{data.fields.Items}</h4>
+      </div>
 
-       
-
-        <div className="amount-container">
+      <div className="amount-container">
         <h4 className="list-Amount">{data.fields.Amount}</h4>
         <div className="delete-btn">
-        <button onClick={deleteData} style={{ color: "red" }}>
-          <FontAwesomeIcon icon="times-circle" />
+          <button onClick={deleteData} style={{ color: "red" }}>
+            <FontAwesomeIcon icon="times-circle" />
           </button>
-          </div>
         </div>
-    
-      
-      
       </div>
-   
+    </div>
   );
 }
 

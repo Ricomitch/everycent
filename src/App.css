@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
 
 nav {
   display: flex !important;
@@ -11,30 +11,36 @@ nav {
   background-color: rgb(48, 79, 120);
   height: 75px;
   width: 100vw;
-  
 }
 
-.nav  a h2 {
+.nav a h2 {
   width: fit-content;
 }
 
-.nav-name{
+.nav-name {
   text-align: left;
-  font-family: 'Exo 2', sans-serif;
+  font-family: "Exo 2", sans-serif;
   padding: 10px;
   margin-right: auto;
   color: rgb(238, 130, 35);
 }
 
-
-
-.delete-btn{
-  color:red;
+.delete-btn {
+  color: red;
 }
 
+.button-add {
+  padding: 5px;
+  background-color: rgb(238, 130, 35);
+  border-radius: 5px;
+}
 
-
-
+.button-update {
+  padding: 15px;
+  padding: 5px;
+  background-color: rgb(238, 130, 35);
+  border-radius: 5px;
+}
 
 .body {
   background-color: #ffffff;
@@ -44,20 +50,16 @@ nav {
   justify-content: flex-start;
   min-height: 100vh;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
-
 
 .list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 350px;
-  
+  padding: 5px;
 
-  
- 
-  
   /* background-color: rgb(240, 240, 240);
   box-shadow: 2px 2px 3px rgb(165, 147, 147);
   font-family: 'Source Sans Pro', sans-serif;
@@ -72,12 +74,15 @@ nav {
   border-radius: 5px; */
 }
 
+.update-form {
+  display: flex;
+}
+
 .amount-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;  
+  align-items: flex-end;
 }
-
 
 .balance {
   margin: 30px auto;
@@ -86,7 +91,6 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 
 .balance-txt {
@@ -130,21 +134,5 @@ h2 {
   color: rgb(238, 130, 35);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+footer {
+}
