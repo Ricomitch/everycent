@@ -31,33 +31,44 @@ function CreateExpense(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Add Expenses</h2>
-      <label htmlFor="category">Category</label>
-      <input
-        type="text"
-        id="category"
-        onChange={(e) => updateCategory(e.target.value)}
-        value={category}
-      />
+    <div className="add-expense">
+      <form onSubmit={handleSubmit}>
+        <h2>Add Expenses</h2>
+        <div className= "add-item">
+          <label htmlFor="category">Category</label>
+          <input
+            type="text"
+            id="category"
+            onChange={(e) => updateCategory(e.target.value)}
+            value={category}
+          />
+        </div>
 
-      <label htmlFor="item">Item</label>
-      <input
-        type="text"
-        id="item"
-        onChange={(e) => updateItem(e.target.value)}
-        value={item}
-      />
+        <div className= "add-item">
+          <label htmlFor="item">Item</label>
+          <input
+            type="text"
+            id="item"
+            onChange={(e) => updateItem(e.target.value)}
+            value={item}
+          />
+        </div>
 
-      <label htmlFor="amount">Amount</label>
-      <input
-        type="text"
-        id="amount"
-        onChange={(e) => updateAmount(e.target.value)}
-        value={amount}
-      />
-      <input type="submit" value="Submit" />
-    </form>
+        <div className= "add-item">
+          <label htmlFor="amount">Amount</label>
+          <input
+            type="text"
+            id="amount"
+            onChange={(e) => updateAmount(e.target.value)}
+            value={amount}
+          />
+        </div>
+
+        <div className= "add-submit">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
   );
 }
 

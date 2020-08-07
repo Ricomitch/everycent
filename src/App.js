@@ -68,6 +68,7 @@ function App() {
       </Route>
 
       <Route path="/add" exact>
+        
       
         <CreateExpenses
           updateFetchExpenses={updateFetchExpenses}

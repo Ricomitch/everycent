@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export const Footer = () => {
   return (
-    <footer>
-      <h3>Rico Mitchell ©2020</h3>
-    </footer>
-  )
-}
+    <div>
+      <div className="footer">Rico Mitchell ©2020</div>
+    </div>
+  );
+};

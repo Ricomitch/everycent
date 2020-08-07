@@ -19,7 +19,7 @@ function UpdateData(props) {
   };
 
   return (
-    <div className="list">
+    <div className="list-two">
       <div>
         <h4 className="list-category" style={{ fontWeight: "bold",  color: "rgb(48, 79, 120)"  }}>
           {data.fields.Category}
@@ -28,18 +28,16 @@ function UpdateData(props) {
       </div>
 
       <div className="amount-container">
-        <h4 className="list-Amount">{data.fields.Amount}</h4>
+        <h4 className="list-Amount">${data.fields.Amount}</h4>
         </div>
        
-
-        <div className="update-form">
           <UpdateExpense
             data={data}
             fetchExpenses={props.fetchExpenses}
             updateFetchExpenses={props.updateFetchExpenses}
           />
         
-      </div>
+     
     </div>
   );
 }
